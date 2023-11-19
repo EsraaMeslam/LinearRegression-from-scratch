@@ -66,10 +66,11 @@ and return y_pred
 **"Test file"**
 
 Importing python libraries 
-   import numpy as np
-   from sklearn.model_selection import train_test_split
-   from sklearn import datasets
-   import matplotlib.pyplot as plt
+
+         import numpy as np
+         from sklearn.model_selection import train_test_split
+         from sklearn import datasets
+         import matplotlib.pyplot as plt
 
 it is not a python library it is the class which i create it above 
 from LinearRegresion import LinearRegression

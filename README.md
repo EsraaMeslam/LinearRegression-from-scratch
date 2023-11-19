@@ -9,7 +9,8 @@ First thing i created a "Class" which is called "LinearRegression" in it i wrote
 **class LinearRegression:**
 
 in the class i create __init__() function and passed to it lr "Learning rate", n_iters "Num_of_Iterations" and assisn them
-**def __init__(self,lr=.001,n_iters=1000):
+
+    **def __init__(self,lr=.001,n_iters=1000):
         self.lr=lr
         self.n_iters=n_iters
         self.weights=None

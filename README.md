@@ -45,8 +45,4 @@ array of zeros not a one value because there are multiple features size of array
             self.weights=self.weights - self.lr*dw
             self.bias=self.bias -self.lr*db**
 
-بببببNNNnn
 
-ببب
-
-ب

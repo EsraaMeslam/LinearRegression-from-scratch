@@ -109,7 +109,9 @@ this is a function for calculating Mean Square error
           return np.mean((y_test-y_prediction)**2)
 
 
-Visualization Data after fitting and drawing he best fit line
+Visualization Data After fitting and drawing the best-fit line
+
+
       y_pred_line=reg.predict(X)
       cmap = plt.get_cmap('viridis')
       fig=plt.figure(figsize=(8,6))

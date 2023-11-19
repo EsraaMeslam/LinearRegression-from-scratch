@@ -72,10 +72,51 @@ Importing python libraries
          from sklearn import datasets
          import matplotlib.pyplot as plt
 
-it is not a python library it is the class which i create it above 
-from LinearRegresion import LinearRegression
+it is not a Python library it is the class that i create above 
+         from LinearRegresion import LinearRegression
 from LinearRegresion(file name) import LinearRegression (class name)
 
+
+I imported a built Dataset and passed it its parameters
+then used "X_train, X_test,y_train,y_test=train_test_split"Built-in fun from sklearn.model_selection
+then used "X_train,X_test,y_train,y_test=train_test_split" here it splits data 80% :20%
+80% for training
+20% for Test
+random_state >>that fixed Data that the model will use it
+
+
+      X,y=datasets.make_regression(n_samples=100,n_features=1,noise=20,random_state=4)
+      X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=.2,random_state=1234)
+
+
+this will visualize raw Data Distribution
+
+      fig=plt.figure(figsize=(8,6))
+      plt.scatter(X[:,0],y,color="b",s=30)
+      plt.show()
+
+
+"reg" is an object from the class "LinearRegression()"
+
+      reg=LinearRegression()
+      reg.fit(X_test,y_test)
+      y_prediction=reg.predict(X_test)
+
+
+this is a function for calculating Mean Square error
+
+      def MSE (y_test,y_prediction):
+          return np.mean((y_test-y_prediction)**2)
+
+
+Visualization Data after fitting and drawing he best fit line
+      y_pred_line=reg.predict(X)
+      cmap = plt.get_cmap('viridis')
+      fig=plt.figure(figsize=(8,6))
+      m1 = plt.scatter(X_train, y_train, color=cmap(0.9), s=10)
+      m2 = plt.scatter(X_test, y_test, color=cmap(0.5), s=10)
+      plt.plot(X, y_pred_line, color='black', linewidth=2, label='Prediction')
+      plt.show() 
 
 
 
